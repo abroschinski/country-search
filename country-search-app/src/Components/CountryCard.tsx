@@ -21,7 +21,7 @@ function CountryCard(props: CountryCardProps){
             <div className="container">
                 <h1 className="countryTitle">
                     {props.name}
-                    <img src={props.flagUrl.toString()} alt={props.name + "Flag"}/>
+                    <img src={props.flagUrl.toString()} alt={`${props.name} Flag`}/>
                 </h1>
                 <div className="countryPopulation">
                     <LabeledDetail 
