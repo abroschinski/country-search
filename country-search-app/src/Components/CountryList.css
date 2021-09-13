@@ -1,0 +1,11 @@
+.countryList{
+    list-style-type: none;
+}
+
+.countryList li{
+    /*
+     * Bug fix for the voice over screen reader.
+     * see: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#accessibility_concerns
+     */
+    content: "\200B"
+}

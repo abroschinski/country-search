@@ -1,0 +1,12 @@
+.searchForm{
+    margin-left: 2.5em;
+}
+
+.searchForm input{
+    font-size:1.25em;
+}
+
+.searchForm .errorMessage{
+    font-size:1.25em;
+    color:red;
+}

@@ -1,0 +1,27 @@
+.summary{
+    margin-left:2.5em;
+}
+.summary .heading{
+    font-size:1.25em;
+}
+
+.summary .heading ul{
+    font-size:0.8em;
+}
+
+.summary .regionList{
+    list-style-type: none;
+    margin-block-start: 0em;
+    margin-block-end: 0em;
+}
+
+.summary .regionList li{
+   display:inline;
+   margin-right: 0.5em;
+   padding: 0 0;
+   /*
+    * Bug fix for the voice over screen reader.
+    * see: https://developer.mozilla.org/en-US/docs/Web/CSS/list-style-type#accessibility_concerns
+    */
+   content: "\200B"
+}
