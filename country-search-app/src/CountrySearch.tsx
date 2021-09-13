@@ -44,9 +44,6 @@ class CountrySearch extends React.Component<CountrySearchProps, CountrySearchSta
         if(isLoading){
             resultsElements = <span className="resultsMessage">Loading...</span>
         }
-        else if(searchResult !== null && searchResult.length === 0){
-            resultsElements = <span className="resultsMessage">No countries found.</span>
-        }
         else if(searchResult !== null){
             resultsElements = (<>
             <CountryList countries = {searchResult!}/>
@@ -55,7 +52,7 @@ class CountrySearch extends React.Component<CountrySearchProps, CountrySearchSta
         }
         
         return (
-            <div>
+            <div className="search">
             {searchField}
             {resultsElements}
             </div>

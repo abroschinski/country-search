@@ -49,7 +49,13 @@ export class CountrySearchServiceImpl implements CountrySearchService{
             return this._errorResult;
         }
         
-        return result as CountrySearchResult;
+        let countrySearchResult = result! as CountrySearchResult;
+        
+        if(countrySearchResult.countries !== null && countrySearchResult.countries.length === 0){
+            return new CountrySearchResult(null, "No countries found.");
+        }
+        
+        return countrySearchResult;
     }
 }
 
