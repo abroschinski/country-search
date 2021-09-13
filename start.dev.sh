@@ -3,7 +3,7 @@
  trap "kill 0" EXIT
  
  cd ./server/
- npm run start &
+ npm run devstart &
  
  cd ../
  
