@@ -1,6 +1,7 @@
 import React from 'react';
-import LabeledDetail from './LabeledDetail'
+import NumberFormat from 'react-number-format'
 
+import LabeledDetail from './LabeledDetail'
 import './CountryCard.css';
 
 export interface CountryCardProps {
@@ -27,7 +28,12 @@ function CountryCard(props: CountryCardProps){
                     <LabeledDetail 
                     detailId = "population"
                     labelName = "Population:">
-                        <span>{props.population}</span>
+                        <NumberFormat
+                            value={props.population}
+                            displayType={'text'}
+                            thousandSeparator={true}
+                            renderText={(value) => <span>{value}</span>}
+                        />
                     </LabeledDetail>
                 </div>
                 <div>
